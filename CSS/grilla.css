@@ -1,0 +1,29 @@
+.grilla{
+    margin: 50px auto;
+    width: 800px;
+    height: 800px;
+    background: var(--bg);
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    border: 5px solid grey;
+}
+
+.grilla:hover{
+    box-shadow: 3px 3px 20px 3px black;
+}
+
+.numero{
+    color: black;
+    font-size: 1.50rem;
+    font-weight: 700;
+    background: #fffff8;
+    background: #898a88;
+    box-sizing: border-box;
+    height: 80px;
+    width: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

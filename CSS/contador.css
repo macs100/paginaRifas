@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.fondo {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgb(226, 226, 226);
+}
+
+.contador {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0px;
+    user-select: none;
+    font-family: Montserrat;
+    margin: 5vh 0;
+}
+
+.contador > span {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.cajaTiempo {
+    width: 160px;
+    height: 160px;
+    border-radius: 3px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 5px 5px 10px rgba(34, 34, 34, 0.103);
+    position: relative;
+}
+
+.cajaTiempo span {
+    font-size: 30px;
+    font-weight: 800;
+    color: #ffffffc5;
+    z-index: 10;
+}
+
+.cajaTiempo p {
+    margin: 0;
+    font-size: 20px;
+    text-transform: capitalize;
+    font-weight: 400;
+    color: #ffffffc5;
+    z-index: 10;
+}
+
+.romboContador {
+    width: 140px;
+    height: 140px;
+    position: absolute;
+    background: #232529;
+    border: 7px solid #ff5e00;
+    transform: rotate(45deg);
+    z-index: 1;
+}
