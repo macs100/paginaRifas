@@ -31,7 +31,7 @@ function copiarLink() {
     document.execCommand('copy');
     document.body.removeChild(aux);
     var css = document.createElement('style');
-    var estilo = document.createTextNode('#aviso {position:fixed; z-index: 999; top: 14vh;left:50%;margin-left: -70px;padding: 2vh 3vh; font-weight: 500; color: #fff; background: #242424;border-radius: 4px;}');
+    var estilo = document.createTextNode('#aviso {position:fixed; z-index: 999; top: 6vh;left:50%;margin-left: -70px;padding: 2vh 3vh; font-weight: 500; color: #fff; background: #242424;border-radius: 4px;}');
     css.appendChild(estilo);
     document.head.appendChild(css);
     var aviso = document.createElement('div');
