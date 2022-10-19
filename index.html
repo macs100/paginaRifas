@@ -9,6 +9,9 @@
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
     <title>Rifas Octubre 6°T</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!-- https://michalsnik.github.io/aos/ -->
     <link rel="shorcut icon" href="./IMG/favicon.svg">
     <link rel="stylesheet" href="css/variables.css">
     <link rel="stylesheet" href="CSS/contador.css">
@@ -18,7 +21,9 @@
     <link rel="stylesheet" href="CSS/footer.css">
     <link rel="stylesheet" href="CSS/cargador.css">
     <link rel="stylesheet" href="CSS/grilla.css">
+    <script defer src="js/grilla.js"></script>
     <script defer src="js/contador.js"></script>
+    <script defer src="js/compartir.js"></script>
 </head>
 
 <body class="oculto">
@@ -48,48 +53,48 @@
         </section>
 
         <div class="contador">
-            <div class="dias cajaTiempo">
+            <div class="animate__animated animate__fadeInDown dias cajaTiempo">
                 <span id="numDias">0</span>
                 <p>días</p>
                 <div class="romboContador"></div>
             </div>
-            <div class="horas cajaTiempo">
+            <div class="animate__animated animate__fadeInDown horas cajaTiempo">
                 <span id="numHoras">00</span>
                 <p>horas</p>
                 <div class="romboContador"></div>
             </div>
-            <div class="minutos cajaTiempo">
+            <div class="animate__animated animate__fadeInDown minutos cajaTiempo">
                 <span id="numMin">00</span>
                 <p>minutos</p>
                 <div class="romboContador"></div>
             </div>
-            <div class="segundos cajaTiempo">
+            <div class="animate__animated animate__fadeInDown segundos cajaTiempo">
                 <span id="numSeg">00</span>
                 <p>segundos</p>
                 <div class="romboContador"></div>
             </div>
         </div>
 
-        <div class="contenedor-premios">
-            <div class="premios">
+        <div class="contenedor-premios" data-aos="fade-left">
+            <div class="premios" data-aos="fade-left">
                 <img src="./IMG/keopsLogo.jpg" alt="Premio">
                 <h2>Mate y termo de acero</h2>
             </div>
-            <div class="premios premiosAlrevez">
+            <div class="premios premiosAlrevez" data-aos="fade-right">
                 <img src="./IMG/keopsLogo.jpg" alt="Premio">
                 <h2>Vino con picada para 2 personas</h2>
             </div>
-            <div class="premios">
+            <div class="premios" data-aos="fade-left">
                 <img src="./IMG/keopsLogo.jpg" alt="Premio">
                 <h2>Cupón descuento 15% Keops y Portacelular</h2>
             </div>
-            <div class="premios premiosAlrevez">
+            <div class="premios premiosAlrevez" data-aos="fade-right">
                 <img src="./IMG/keopsLogo.jpg" alt="Premio">
                 <h2>Cupón descuento 10% Keops</h2>
             </div>
         </div>
 
-        <div class="redes-compartir">
+        <div class="redes-compartir " data-aos="flip-right">
             <div class="abrirCompartir">
                 <svg focusable="no" viewBox="0 0 24 24">
                     <path
@@ -98,53 +103,251 @@
                 </svg>
             </div>
             <div class="iconosCompartir">
-                <p class="compartir">Compartir</p>
-                <div class="lineaCompartir">
-                    <a class="redes" href="">
+                <div class="cuadroRedes">
+                    <button class="redes" onclick="javascript:copiarLink()">
                         <svg focusable="no" viewBox="0 0 24 24">
                             <path
-                                d="M11.999 7.377a4.623 4.623 0 1 0 0 9.248 4.623 4.623 0 0 0 0-9.248zm0 7.627a3.004 3.004 0 1 1 0-6.008 3.004 3.004 0 0 1 0 6.008z">
-                            </path>
-                            <circle cx="16.806" cy="7.207" r="1.078"></circle>
-                            <path
-                                d="M20.533 6.111A4.605 4.605 0 0 0 17.9 3.479a6.606 6.606 0 0 0-2.186-.42c-.963-.042-1.268-.054-3.71-.054s-2.755 0-3.71.054a6.554 6.554 0 0 0-2.184.42 4.6 4.6 0 0 0-2.633 2.632 6.585 6.585 0 0 0-.419 2.186c-.043.962-.056 1.267-.056 3.71 0 2.442 0 2.753.056 3.71.015.748.156 1.486.419 2.187a4.61 4.61 0 0 0 2.634 2.632 6.584 6.584 0 0 0 2.185.45c.963.042 1.268.055 3.71.055s2.755 0 3.71-.055a6.615 6.615 0 0 0 2.186-.419 4.613 4.613 0 0 0 2.633-2.633c.263-.7.404-1.438.419-2.186.043-.962.056-1.267.056-3.71s0-2.753-.056-3.71a6.581 6.581 0 0 0-.421-2.217zm-1.218 9.532a5.043 5.043 0 0 1-.311 1.688 2.987 2.987 0 0 1-1.712 1.711 4.985 4.985 0 0 1-1.67.311c-.95.044-1.218.055-3.654.055-2.438 0-2.687 0-3.655-.055a4.96 4.96 0 0 1-1.669-.311 2.985 2.985 0 0 1-1.719-1.711 5.08 5.08 0 0 1-.311-1.669c-.043-.95-.053-1.218-.053-3.654 0-2.437 0-2.686.053-3.655a5.038 5.038 0 0 1 .311-1.687c.305-.789.93-1.41 1.719-1.712a5.01 5.01 0 0 1 1.669-.311c.951-.043 1.218-.055 3.655-.055s2.687 0 3.654.055a4.96 4.96 0 0 1 1.67.311 2.991 2.991 0 0 1 1.712 1.712 5.08 5.08 0 0 1 .311 1.669c.043.951.054 1.218.054 3.655 0 2.436 0 2.698-.043 3.654h-.011z">
+                                d="M20 2H10c-1.103 0-2 .897-2 2v4H4c-1.103 0-2 .897-2 2v10c0 1.103.897 2 2 2h10c1.103 0 2-.897 2-2v-4h4c1.103 0 2-.897 2-2V4c0-1.103-.897-2-2-2zM4 20V10h10l.002 10H4zm16-6h-4v-4c0-1.103-.897-2-2-2h-4V4h10v10z">
                             </path>
                         </svg>
-                        <p>Instagram</p>
-                    </a>
-                    <a class="redes" href="">
+                        <p>Copiar</p>
+                    </button>
+                    <button class="redes" onclick="javascript:compartirEnWhatsapp()">
                         <svg focusable="no" viewBox="0 0 24 24">
                             <path fill-rule="evenodd" clip-rule="evenodd"
                                 d="M18.403 5.633A8.919 8.919 0 0 0 12.053 3c-4.948 0-8.976 4.027-8.978 8.977 0 1.582.413 3.126 1.198 4.488L3 21.116l4.759-1.249a8.981 8.981 0 0 0 4.29 1.093h.004c4.947 0 8.975-4.027 8.977-8.977a8.926 8.926 0 0 0-2.627-6.35m-6.35 13.812h-.003a7.446 7.446 0 0 1-3.798-1.041l-.272-.162-2.824.741.753-2.753-.177-.282a7.448 7.448 0 0 1-1.141-3.971c.002-4.114 3.349-7.461 7.465-7.461a7.413 7.413 0 0 1 5.275 2.188 7.42 7.42 0 0 1 2.183 5.279c-.002 4.114-3.349 7.462-7.461 7.462m4.093-5.589c-.225-.113-1.327-.655-1.533-.73-.205-.075-.354-.112-.504.112s-.58.729-.711.879-.262.168-.486.056-.947-.349-1.804-1.113c-.667-.595-1.117-1.329-1.248-1.554s-.014-.346.099-.458c.101-.1.224-.262.336-.393.112-.131.149-.224.224-.374s.038-.281-.019-.393c-.056-.113-.505-1.217-.692-1.666-.181-.435-.366-.377-.504-.383a9.65 9.65 0 0 0-.429-.008.826.826 0 0 0-.599.28c-.206.225-.785.767-.785 1.871s.804 2.171.916 2.321c.112.15 1.582 2.415 3.832 3.387.536.231.954.369 1.279.473.537.171 1.026.146 1.413.089.431-.064 1.327-.542 1.514-1.066.187-.524.187-.973.131-1.067-.056-.094-.207-.151-.43-.263">
                             </path>
                         </svg>
                         <p>Whatsapp</p>
-                    </a>
-                    <a class="redes" href="">
+                    </button>
+                    <button class="redes" onclick="javascript:compartirEnTwitter()">
                         <svg focusable="no" viewBox="0 0 24 24">
                             <path
                                 d="M19.633 7.997c.013.175.013.349.013.523 0 5.325-4.053 11.461-11.46 11.461-2.282 0-4.402-.661-6.186-1.809.324.037.636.05.973.05a8.07 8.07 0 0 0 5.001-1.721 4.036 4.036 0 0 1-3.767-2.793c.249.037.499.062.761.062.361 0 .724-.05 1.061-.137a4.027 4.027 0 0 1-3.23-3.953v-.05c.537.299 1.16.486 1.82.511a4.022 4.022 0 0 1-1.796-3.354c0-.748.199-1.434.548-2.032a11.457 11.457 0 0 0 8.306 4.215c-.062-.3-.1-.611-.1-.923a4.026 4.026 0 0 1 4.028-4.028c1.16 0 2.207.486 2.943 1.272a7.957 7.957 0 0 0 2.556-.973 4.02 4.02 0 0 1-1.771 2.22 8.073 8.073 0 0 0 2.319-.624 8.645 8.645 0 0 1-2.019 2.083z">
                             </path>
                         </svg>
                         <p>Twitter</p>
-                    </a>
-                    <a class="redes" href="">
+                    </button>
+                    <button class="redes" onclick="javascript:compartirEnFacebook()">
                         <svg focusable="no" viewBox="0 0 24 24">
                             <path
                                 d="M12.001 2.002c-5.522 0-9.999 4.477-9.999 9.999 0 4.99 3.656 9.126 8.437 9.879v-6.988h-2.54v-2.891h2.54V9.798c0-2.508 1.493-3.891 3.776-3.891 1.094 0 2.24.195 2.24.195v2.459h-1.264c-1.24 0-1.628.772-1.628 1.563v1.875h2.771l-.443 2.891h-2.328v6.988C18.344 21.129 22 16.992 22 12.001c0-5.522-4.477-9.999-9.999-9.999z">
                             </path>
                         </svg>
                         <p>Facebook</p>
-                    </a>
+                    </button>
                 </div>
             </div>
+        </div>
         </div>
     </main>
 
     <div class="grilla">
-        <div class="numero">
-            <p>1</p>
-        </div>
+        <!-- .numero*200>p{$}      crea 200 divs que contienen numeros del 1 al 200 -->
+        <!-- ".noVendido" es la clase para no vendidos, el resto se marcan en rojo solo por ser numeros-->
+        <!-- .numero>#num$.numero*20 -->
+
+        <div class="numero" id="1">1</div>
+        <div class="numero" id="2">2</div>
+        <div class="numero" id="3">3</div>
+        <div class="numero" id="4">4</div>
+        <div class="numero" id="5">5</div>
+        <div class="numero" id="6">6</div>
+        <div class="numero" id="7">7</div>
+        <div class="numero" id="8">8</div>
+        <div class="numero" id="9">9</div>
+        <div class="numero" id="10">10</div>
+        <div class="numero" id="11">11</div>
+        <div class="numero" id="12">12</div>
+        <div class="numero" id="13">13</div>
+        <div class="numero" id="14">14</div>
+        <div class="numero" id="15">15</div>
+        <div class="numero" id="16">16</div>
+        <div class="numero" id="17">17</div>
+        <div class="numero" id="18">18</div>
+        <div class="numero" id="19">19</div>
+        <div class="numero" id="20">20</div>
+        <div class="numero" id="21">21</div>
+        <div class="numero" id="22">22</div>
+        <div class="numero" id="23">23</div>
+        <div class="numero" id="24">24</div>
+        <div class="numero" id="25">25</div>
+        <div class="numero" id="26">26</div>
+        <div class="numero" id="27">27</div>
+        <div class="numero" id="28">28</div>
+        <div class="numero" id="29">29</div>
+        <div class="numero" id="30">30</div>
+        <div class="numero" id="31">31</div>
+        <div class="numero" id="32">32</div>
+        <div class="numero" id="33">33</div>
+        <div class="numero" id="34">34</div>
+        <div class="numero" id="35">35</div>
+        <div class="numero" id="36">36</div>
+        <div class="numero" id="37">37</div>
+        <div class="numero" id="38">38</div>
+        <div class="numero" id="39">39</div>
+        <div class="numero" id="40">40</div>
+        <div class="numero" id="41">41</div>
+        <div class="numero" id="42">42</div>
+        <div class="numero" id="43">43</div>
+        <div class="numero" id="44">44</div>
+        <div class="numero" id="45">45</div>
+        <div class="numero" id="46">46</div>
+        <div class="numero" id="47">47</div>
+        <div class="numero" id="48">48</div>
+        <div class="numero" id="49">49</div>
+        <div class="numero" id="50">50</div>
+        <div class="numero" id="51">51</div>
+        <div class="numero" id="52">52</div>
+        <div class="numero" id="53">53</div>
+        <div class="numero" id="54">54</div>
+        <div class="numero" id="55">55</div>
+        <div class="numero" id="56">56</div>
+        <div class="numero" id="57">57</div>
+        <div class="numero" id="58">58</div>
+        <div class="numero" id="59">59</div>
+        <div class="numero" id="60">60</div>
+        <div class="numero" id="61">61</div>
+        <div class="numero" id="62">62</div>
+        <div class="numero" id="63">63</div>
+        <div class="numero" id="64">64</div>
+        <div class="numero" id="65">65</div>
+        <div class="numero" id="66">66</div>
+        <div class="numero" id="67">67</div>
+        <div class="numero" id="68">68</div>
+        <div class="numero" id="69">69</div>
+        <div class="numero" id="70">70</div>
+        <div class="numero" id="71">71</div>
+        <div class="numero" id="72">72</div>
+        <div class="numero" id="73">73</div>
+        <div class="numero" id="74">74</div>
+        <div class="numero" id="75">75</div>
+        <div class="numero" id="76">76</div>
+        <div class="numero" id="77">77</div>
+        <div class="numero" id="78">78</div>
+        <div class="numero" id="79">79</div>
+        <div class="numero" id="80">80</div>
+        <div class="numero" id="81">81</div>
+        <div class="numero" id="82">82</div>
+        <div class="numero" id="83">83</div>
+        <div class="numero" id="84">84</div>
+        <div class="numero" id="85">85</div>
+        <div class="numero" id="86">86</div>
+        <div class="numero" id="87">87</div>
+        <div class="numero" id="88">88</div>
+        <div class="numero" id="89">89</div>
+        <div class="numero" id="90">90</div>
+        <div class="numero" id="91">91</div>
+        <div class="numero" id="92">92</div>
+        <div class="numero" id="93">93</div>
+        <div class="numero" id="94">94</div>
+        <div class="numero" id="95">95</div>
+        <div class="numero" id="96">96</div>
+        <div class="numero" id="97">97</div>
+        <div class="numero" id="98">98</div>
+        <div class="numero" id="99">99</div>
+        <div class="numero" id="100">100</div>
+        <div class="numero" id="101">101</div>
+        <div class="numero" id="102">102</div>
+        <div class="numero" id="103">103</div>
+        <div class="numero" id="104">104</div>
+        <div class="numero" id="105">105</div>
+        <div class="numero" id="106">106</div>
+        <div class="numero" id="107">107</div>
+        <div class="numero" id="108">108</div>
+        <div class="numero" id="109">109</div>
+        <div class="numero" id="110">110</div>
+        <div class="numero" id="111">111</div>
+        <div class="numero" id="112">112</div>
+        <div class="numero" id="113">113</div>
+        <div class="numero" id="114">114</div>
+        <div class="numero" id="115">115</div>
+        <div class="numero" id="116">116</div>
+        <div class="numero" id="117">117</div>
+        <div class="numero" id="118">118</div>
+        <div class="numero" id="119">119</div>
+        <div class="numero" id="120">120</div>
+        <div class="numero" id="121">121</div>
+        <div class="numero" id="122">122</div>
+        <div class="numero" id="123">123</div>
+        <div class="numero" id="124">124</div>
+        <div class="numero" id="125">125</div>
+        <div class="numero" id="126">126</div>
+        <div class="numero" id="127">127</div>
+        <div class="numero" id="128">128</div>
+        <div class="numero" id="129">129</div>
+        <div class="numero" id="130">130</div>
+        <div class="numero" id="131">131</div>
+        <div class="numero" id="132">132</div>
+        <div class="numero" id="133">133</div>
+        <div class="numero" id="134">134</div>
+        <div class="numero" id="135">135</div>
+        <div class="numero" id="136">136</div>
+        <div class="numero" id="137">137</div>
+        <div class="numero" id="138">138</div>
+        <div class="numero" id="139">139</div>
+        <div class="numero" id="140">140</div>
+        <div class="numero" id="141">141</div>
+        <div class="numero" id="142">142</div>
+        <div class="numero" id="143">143</div>
+        <div class="numero" id="144">144</div>
+        <div class="numero" id="145">145</div>
+        <div class="numero" id="146">146</div>
+        <div class="numero" id="147">147</div>
+        <div class="numero" id="148">148</div>
+        <div class="numero" id="149">149</div>
+        <div class="numero" id="150">150</div>
+        <div class="numero" id="151">151</div>
+        <div class="numero" id="152">152</div>
+        <div class="numero" id="153">153</div>
+        <div class="numero" id="154">154</div>
+        <div class="numero" id="155">155</div>
+        <div class="numero" id="156">156</div>
+        <div class="numero" id="157">157</div>
+        <div class="numero" id="158">158</div>
+        <div class="numero" id="159">159</div>
+        <div class="numero" id="160">160</div>
+        <div class="numero" id="161">161</div>
+        <div class="numero" id="162">162</div>
+        <div class="numero" id="163">163</div>
+        <div class="numero" id="164">164</div>
+        <div class="numero" id="165">165</div>
+        <div class="numero" id="166">166</div>
+        <div class="numero" id="167">167</div>
+        <div class="numero" id="168">168</div>
+        <div class="numero" id="169">169</div>
+        <div class="numero" id="170">170</div>
+        <div class="numero" id="171">171</div>
+        <div class="numero" id="172">172</div>
+        <div class="numero" id="173">173</div>
+        <div class="numero" id="174">174</div>
+        <div class="numero" id="175">175</div>
+        <div class="numero" id="176">176</div>
+        <div class="numero" id="177">177</div>
+        <div class="numero" id="178">178</div>
+        <div class="numero" id="179">179</div>
+        <div class="numero" id="180">180</div>
+        <div class="numero" id="181">181</div>
+        <div class="numero" id="182">182</div>
+        <div class="numero" id="183">183</div>
+        <div class="numero" id="184">184</div>
+        <div class="numero" id="185">185</div>
+        <div class="numero" id="186">186</div>
+        <div class="numero" id="187">187</div>
+        <div class="numero" id="188">188</div>
+        <div class="numero" id="189">189</div>
+        <div class="numero" id="190">190</div>
+        <div class="numero" id="191">191</div>
+        <div class="numero" id="192">192</div>
+        <div class="numero" id="193">193</div>
+        <div class="numero" id="194">194</div>
+        <div class="numero" id="195">195</div>
+        <div class="numero" id="196">196</div>
+        <div class="numero" id="197">197</div>
+        <div class="numero" id="198">198</div>
+        <div class="numero" id="199">199</div>
+        <div class="numero" id="200">200</div>
+
     </div>
 
     <footer>
@@ -152,6 +355,11 @@
             <p>6° Tecnica</p>
         </div>
     </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
     <script src="JS/loader.js"></script>
 
 </body>

@@ -1,29 +1,59 @@
 .grilla{
     margin: 50px auto;
     width: 800px;
-    height: 800px;
-    background: var(--bg);
+    height: 1600px;
+    background: #808080;
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     justify-content: flex-start;
-    border: 5px solid grey;
+    flex-wrap: wrap;
+    border-radius: 8px;
+    padding: 7px;
 }
 
 .grilla:hover{
     box-shadow: 3px 3px 20px 3px black;
 }
 
+
+
 .numero{
     color: black;
     font-size: 1.50rem;
     font-weight: 700;
-    background: #fffff8;
-    background: #898a88;
     box-sizing: border-box;
     height: 80px;
     width: 80px;
     display: flex;
     align-items: center;
     justify-content: center;
+    border: 2px solid #808080;
+    cursor: pointer;
+    transition: .3s ease;
 }
+
+.noVendido:hover {
+    transform: scale(1.1);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.452);
+    border-color: transparent;
+}
+
+
+.vendido{
+    background-color: #fa0000; /*a00000*/
+}
+
+.grilla .vendidoOscuro{
+    background-color: #a00000;/*880000*/
+}
+
+.noVendido{
+    background: rgb(139, 139, 139);
+}
+
+.grilla .noVendidoOscuro{
+    background: rgba(66, 66, 66, 0.753);
+}
+
